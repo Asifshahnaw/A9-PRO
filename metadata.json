@@ -1,0 +1,6 @@
+{
+  "name": "A9 Downloader",
+  "description": "Production-ready TikTok video downloader web application featuring real media resolution, quality selection, streaming downloads, Android Gallery guidance, and mobile-first PWA experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="a9grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F8CFF" />
+      <stop offset="100%" stop-color="#8257FF" />
+    </linearGradient>
+    <linearGradient id="bggrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151B26" />
+      <stop offset="100%" stop-color="#090B10" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background with subtle border -->
+  <rect width="512" height="512" rx="128" fill="url(#bggrad)" stroke="#293244" stroke-width="8" />
+  
+  <!-- Stylized A9 Symbol -->
+  <g transform="translate(64, 56)">
+    <!-- 'A' shape -->
+    <path d="M 96 280 L 148 120 C 154 100 178 100 184 120 L 236 280 M 116 230 L 216 230" 
+          stroke="url(#a9grad)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    
+    <!-- '9' shape with download chevron integrated -->
+    <path d="M 280 180 C 280 130 330 130 340 180 C 350 230 300 240 280 200 C 265 170 290 140 330 140 C 370 140 380 170 380 240 C 380 300 320 320 290 310" 
+          stroke="#F7F9FC" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+    <!-- Download Arrow Accent -->
+    <path d="M 192 310 L 192 360 M 165 338 L 192 365 L 219 338" 
+          stroke="url(#a9grad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glow)" />
+  </g>
+</svg>

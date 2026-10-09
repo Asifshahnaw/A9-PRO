@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #090B10;
+  --bg-secondary: #11151D;
+  --bg-card: #151B26;
+  --bg-input: #0D121B;
+  --accent-primary: #4F8CFF;
+  --accent-secondary: #8257FF;
+  --text-primary: #F7F9FC;
+  --text-secondary: #A4ADBD;
+  --border-subtle: #293244;
+  --success: #31C48D;
+  --warning: #F5B942;
+  --error: #F87171;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html.light {
+  --bg-primary: #F4F6FB;
+  --bg-secondary: #E9EEF7;
+  --bg-card: #FFFFFF;
+  --bg-input: #F8FAFC;
+  --accent-primary: #2563EB;
+  --accent-secondary: #7C3AED;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --border-subtle: #CBD5E1;
+  --success: #16A34A;
+  --warning: #D97706;
+  --error: #DC2626;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Smooth indeterminate progress animation */
+@keyframes indeterminateProgress {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-indeterminate-progress {
+  animation: indeterminateProgress 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+
